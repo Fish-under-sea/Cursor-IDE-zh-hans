@@ -119,6 +119,25 @@ npm run dev
 - 标点规范，中文使用全角标点符号
 - 品牌词不翻译，Cursor、VS Code、Git、GitHub 等保持原样
 
+### 硬编码字符串修复脚本
+
+由于 Cursor 部分功能（如"将符号添加到聊天"菜单项）的字符串是硬编码在源码中的，不经过 i18n 系统，因此语言包无法翻译这些内容。
+
+为解决此问题，提供了 `cursor_menu_translate.py` 脚本，直接修改 Cursor 编译后的 JS 文件：
+
+```bash
+# 运行脚本（需要管理员权限）
+python cursor_menu_translate.py
+```
+
+**功能说明：**
+- 将 `Add Symbol to Current Chat...` 替换为 `将符号添加到当前聊天...`
+- 将 `Add Symbol to New Chat...` 替换为 `将符号添加到新聊天...`
+
+**注意：**
+- 每次 Cursor 更新后需要重新运行此脚本
+- 需要以管理员身份运行
+
 ## 开发说明
 
 ### 项目结构
@@ -129,6 +148,7 @@ cursor-language-pack-zh-hans/
 │   ├── main.i18n.json              # 主语言包（核心翻译）
 │   └── extensions/                  # 各扩展的语言包
 ├── .cursor/rules/                   # 翻译工作流规范
+├── cursor_menu_translate.py         # 硬编码字符串汉化脚本
 ├── package.json                     # 扩展配置
 └── README.cursor.md                 # 本文件
 ```
