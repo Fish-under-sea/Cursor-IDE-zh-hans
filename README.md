@@ -164,7 +164,7 @@ cursor-language-pack-zh-hans/
 
 | 项 | 说明 |
 |----|------|
-| **未找到 LICENSE 文件** | `package.json` 中声明为「SEE MIT LICENSE IN LICENSE.md」，但仓库根目录**没有 `LICENSE.md`**。如需 MIT 授权生效，建议补充该文件 |
+| **许可** | 已添加 **MIT LICENSE**（根目录 `LICENSE`）。`package.json` 中仍写作「SEE MIT LICENSE IN LICENSE.md」，指向的文件名与实际不符，可按需改为 `LICENSE` |
 | **文档中的两处路径不存在** | 原有说明的项目结构里列出 `README.cursor.md` 与 `.cursor/rules/`，实测分别是 `README.vscode.md` 与**不存在**（本 README 已按实测修正） |
 
 ---
