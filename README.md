@@ -1,48 +1,22 @@
 > **⏸️ 暂停维护** · 最近提交：2026-04-14（约 5 个月前）
 >
-> 汉化词条依赖上游 Microsoft scode-loc 词库；等上游词条更新后同步跟进。
+> 汉化词条依赖上游 Microsoft vscode-loc 词库；等上游词条更新后同步跟进。
 
+<div align="center">
 
-<p align="center">
-  <strong>
-    <span style="font-size: 2em; font-weight: 900;">
-      汉&nbsp;&nbsp;化&nbsp;&nbsp;全&nbsp;&nbsp;适&nbsp;&nbsp;配
-    </span>
-  </strong>
-  <br>
-  <strong>
-    <span style="font-size: 1.4em; color: #888; letter-spacing: 0.15em;">
-      —— 强迫症福音 ——
-    </span>
-  </strong>
-</p>
+# 🔥 Cursor IDE 简体中文语言包 🔥
+
+**汉化全适配 —— 强迫症福音**
+
+基于 Microsoft [`vscode-loc`](https://github.com/microsoft/vscode-loc) 社区语言包开发 · 适配 Cursor 独家功能
+
+![Cursor](https://img.shields.io/badge/Cursor-IDE-brightgreen?style=flat-square) ![Language](https://img.shields.io/badge/Language-简体中文-red?style=flat-square) ![VS Code Compat](https://img.shields.io/badge/VS%20Code%20Compat-100%25-blue?style=flat-square) ![Entries](https://img.shields.io/badge/翻译条目-1982%2B-gold?style=flat-square)
+
+</div>
 
 ---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Cursor-IDE-brightgreen?style=for-the-badge&logo=cursor&logoColor=00E244" alt="Cursor">
-  <img src="https://img.shields.io/badge/Language-Chinese%20Simplified-red?style=for-the-badge" alt="Chinese">
-  <img src="https://img.shields.io/badge/VS%20Code%20Compat-100%25-blue?style=for-the-badge&logo=visual-studio-code&logoColor=007ACC" alt="VS Code Compatible">
-  <img src="https://img.shields.io/badge/Translating-1982%2B%20Keys-gold?style=for-the-badge" alt="1982+ Keys Translated">
-</p>
-
----
-
-<p align="center">
-  <strong style="font-size: 1.3em;">
-    🔥 Cursor IDE 简体中文语言包 🔥
-  </strong>
-  <br>
-  <strong>
-    基于 Microsoft <a href="https://github.com/microsoft/vscode-loc">vscode-loc</a> 社区语言包开发
-  </strong>
-  <br>
-  适配 Cursor 独家功能：Agent、Glass UI、Composer、Cursor Blame、MCP...
-</p>
-
----
-
-## 功能亮点
+## ✨ 功能亮点
 
 | 特性 | 说明 |
 |------|------|
@@ -50,123 +24,148 @@
 | **Cursor 独家适配** | Agent 面板、Glass UI、Composer、Cursor Blame、MCP 工具等 Cursor 特有功能全翻译 |
 | **1982+ 翻译条目** | 最新版本 1982 个缺失 key 已全部补全 |
 | **持续跟进** | 随 Cursor 版本更新持续翻译新增内容 |
-| **开箱即用** | 安装后重启 Cursor 或执行"配置显示语言"命令即可切换 |
+| **开箱即用** | 安装后重启 Cursor 或执行「配置显示语言」命令即可切换 |
 
-## 安装方式
+## 📦 安装方式
 
 ### 方式一：从 VSIX 安装（推荐）
 
-1. 下载最新 `.vsix` 安装包
-2. 在 Cursor 中运行"安装来自 VSIX 的扩展"命令
-3. 选择下载的 `.vsix` 文件
-4. 重启 Cursor
+下载仓库中的 `.vsix` 文件，然后在 Cursor 中：
+
+```bash
+# 命令面板（Ctrl+Shift+P）→ 输入：
+Extensions: Install from VSIX...
+```
+
+> 若仓库未附带 `.vsix`，请用方式二自行构建。
 
 ### 方式二：从源码构建
 
 ```bash
 # 克隆本仓库
-git clone https://github.com/YOUR_USERNAME/cursor-language-pack-zh-hans.git
+git clone https://github.com/Fish-under-sea/Cursor-IDE-zh-hans.git
+cd Cursor-IDE-zh-hans
 
 # 安装依赖（需 Node.js）
 npm install
 
 # 打包为 VSIX
-npm run package
+npx vsce package
 
 # 安装
-cursor --install-extension ./cursor-language-pack-zh-hans-*.vsix
+# 命令面板 → Extensions: Install from VSIX... → 选择生成的 .vsix
 ```
 
 ### 方式三：本地链接安装（开发调试用）
 
 ```bash
 # 在仓库目录下执行
-npm install
-npm run dev
-
-# 然后在 Cursor 中启用此扩展
+# 将本目录链接到 Cursor 扩展目录，改动即时生效
 ```
 
-## 切换语言
+### 切换语言
 
-1. 按 `Ctrl+Shift+P` 打开命令面板
-2. 输入 `display` 搜索"配置显示语言"（Configure Display Language）
-3. 选择 `中文(简体)`（Chinese (Simplified)）
-4. 重启 Cursor
+安装完成后：
 
-## 翻译覆盖范围
+1. **重启 Cursor**，或
+2. 打开命令面板（`Ctrl+Shift+P`），执行 `Configure Display Language` → 选择 **中文（简体）**
 
-本语言包基于 Microsoft [vscode-loc](https://github.com/microsoft/vscode-loc) 社区翻译项目开发，在其基础上新增了大量 Cursor 独占功能的翻译。
+## 🌐 翻译覆盖范围
+
+本语言包基于 Microsoft [`vscode-loc`](https://github.com/microsoft/vscode-loc) 社区翻译项目开发，在其基础上**新增了大量 Cursor 独占功能的翻译**。
 
 ### 已覆盖的模块类型
 
-- **编辑器核心** — 编辑器选项、上下文键、内联补全、内联差异
-- **Cursor Glass UI** — 代理面板、文件树、终端、边栏组件
-- **Cursor Agent** — Agent 布局、代理操作、聊天操作
-- **聊天功能** — Copilot 设置、聊天编辑、AI 配置、提示语法
-- **Composer** — Composer 编辑器、浏览器组件
-- **Cursor Blame** — Git Blame 集成、悬停视图
-- **MCP 集成** — MCP 命令、配置、服务
-- **扩展管理** — 扩展安装、监控、性能分析
-- **终端** — Shell 集成、提示栏、补全配置
-- **工作区** — 工作区配置、信任设置
-- **窗口管理** — Electron 窗口操作、对话框
-- **以及更多...**
+| 模块 | 覆盖内容 |
+|------|---------|
+| **编辑器核心** | 编辑器选项、上下文键、内联补全、内联差异 |
+| **Cursor Glass UI** | 代理面板、文件树、终端、边栏组件 |
+| **Cursor Agent** | Agent 布局、代理操作、聊天操作 |
+| **聊天功能** | Copilot 设置、聊天编辑、AI 配置、提示语法 |
+| **Composer** | Composer 编辑器、浏览器组件 |
+| **Cursor Blame** | Git Blame 集成、悬停视图 |
+| **MCP 集成** | MCP 命令、配置、服务 |
+| **扩展管理** | 扩展安装、监控、性能分析 |
+| **终端** | Shell 集成、提示栏、补全配置 |
+| **工作区** | 工作区配置、信任设置 |
+| **窗口管理** | Electron 窗口操作、对话框 |
 
 ### 翻译原则
 
-- 准确性第一，确保翻译传达与原文完全相同的含义
-- 简洁性优先，在准确的前提下使用简洁的中文表达
-- 术语一致性，相同英文术语在不同位置保持统一翻译
-- 占位符保护，`{N}`、`$(icon)`、`{key}` 格式的占位符原样保留
-- 标点规范，中文使用全角标点符号
-- 品牌词不翻译，Cursor、VS Code、Git、GitHub 等保持原样
+| 原则 | 含义 |
+|------|------|
+| **准确性第一** | 确保翻译传达与原文**完全相同**的含义 |
+| **简洁性优先** | 在准确的前提下使用简洁的中文表达 |
+| **术语一致性** | 相同英文术语在不同位置保持统一翻译 |
+| **占位符保护** | `{N}`、`$(icon)`、`{key}` 格式的占位符**原样保留** |
+| **标点规范** | 中文使用全角标点符号 |
+| **品牌词不翻译** | Cursor、VS Code、Git、GitHub 等保持原样 |
 
-### 硬编码字符串修复脚本
+## 🔧 硬编码字符串修复脚本
 
-由于 Cursor 部分功能（如"将符号添加到聊天"菜单项）的字符串是硬编码在源码中的，不经过 i18n 系统，因此语言包无法翻译这些内容。
+Cursor 部分功能（如「将符号添加到聊天」菜单项）的字符串**硬编码在源码中**，不经过 i18n 系统，因此语言包无法翻译这些内容。
 
-为解决此问题，提供了 `cursor_menu_translate.py` 脚本，直接修改 Cursor 编译后的 JS 文件：
+为此提供了 `cursor_menu_translate.py`，直接修改 Cursor 编译后的 JS 文件：
 
 ```bash
 # 运行脚本（需要管理员权限）
 python cursor_menu_translate.py
 ```
 
-**功能说明：**
-- 将 `Add Symbol to Current Chat...` 替换为 `将符号添加到当前聊天...`
-- 将 `Add Symbol to New Chat...` 替换为 `将符号添加到新聊天...`
+**功能说明**：
 
-**注意：**
-- 每次 Cursor 更新后需要重新运行此脚本
-- 需要以管理员身份运行
+- `Add Symbol to Current Chat...` → `将符号添加到当前聊天...`
+- `Add Symbol to New Chat...` → `将符号添加到新聊天...`
 
-## 开发说明
+> ⚠️ **注意**：
+> - **每次 Cursor 更新后需要重新运行**此脚本
+> - **需要以管理员身份运行**（会写入 Cursor 安装目录）
 
-### 项目结构
+## 🛠️ 技术栈与项目信息
 
-```
+| 项 | 内容 |
+|----|------|
+| 扩展名 | `cursor-language-pack-zh-hans` |
+| 显示名 | Chinese (Simplified) (简体中文) Language Pack for cursor |
+| 版本 | **1.111.2** |
+| 发布者 | `Fish-under-sea` |
+| 语言包文件 | `translations/main.i18n.json` + `translations/extensions/`（92 个扩展语言包） |
+| 运行脚本 | `npm run update` |
+| 最小 VS Code 版本 | `^1.0.0` |
+
+## 📁 项目结构
+
+```text
 cursor-language-pack-zh-hans/
 ├── translations/
 │   ├── main.i18n.json              # 主语言包（核心翻译）
-│   └── extensions/                  # 各扩展的语言包
-├── .cursor/rules/                   # 翻译工作流规范
-├── cursor_menu_translate.py         # 硬编码字符串汉化脚本
-├── package.json                     # 扩展配置
-└── README.cursor.md                 # 本文件
+│   └── extensions/                 # 各扩展的语言包（92 个）
+├── cursor_menu_translate.py        # 硬编码字符串汉化脚本
+├── package.json                    # 扩展配置
+├── README.vscode.md                # VS Code 部分说明
+├── CHANGELOG.md                    # 变更日志
+├── languagepack.png                # 图标
+└── .vscodeignore
 ```
 
-### 翻译工作流
+## 🔄 翻译工作流
 
-每次 Cursor 版本更新后，通过分析脚本对比英文源文件与现有中文包，自动找出新增的缺失 key，补充翻译后合并回主文件。
+每次 Cursor 版本更新后，通过分析脚本**对比英文源文件与现有中文包**，自动找出新增的缺失 key，补充翻译后合并回主文件。
 
-## 致谢
+## 🙏 致谢
 
-本项目基于 **Microsoft [vscode-loc](https://github.com/microsoft/vscode-loc) 社区语言包** 开发。
+本项目基于 **Microsoft [`vscode-loc`](https://github.com/microsoft/vscode-loc) 社区语言包** 开发。
 
-vscode-loc 是微软官方的 VS Code 本地化开源项目，由全球社区志愿者共同维护。本项目的 VS Code 翻译部分直接来源于此，感谢所有参与 vscode-loc 翻译工作的贡献者。
+`vscode-loc` 是微软官方的 VS Code 本地化开源项目，由全球社区志愿者共同维护。本项目的 VS Code 翻译部分直接来源于此 —— **感谢所有参与 vscode-loc 翻译工作的贡献者**。
 
 特别感谢 [Joel Yang](https://github.com/jeasonstudio) 等早期贡献者，在项目向社区开放后翻译了大量新增字符串（4 万余字）。
+
+## ⚠️ 已知情况
+
+| 项 | 说明 |
+|----|------|
+| **未找到 LICENSE 文件** | `package.json` 中声明为「SEE MIT LICENSE IN LICENSE.md」，但仓库根目录**没有 `LICENSE.md`**。如需 MIT 授权生效，建议补充该文件 |
+| **文档中的两处路径不存在** | 原有说明的项目结构里列出 `README.cursor.md` 与 `.cursor/rules/`，实测分别是 `README.vscode.md` 与**不存在**（本 README 已按实测修正） |
 
 ---
 
